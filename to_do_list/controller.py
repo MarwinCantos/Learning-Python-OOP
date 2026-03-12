@@ -59,11 +59,11 @@ class To_do:
             self.display.show_tasks(tasks)
         
         elif input_user == 5:
-            self.logic.exit_task()
-            self.clear_screen()
+            exit()
         
         else:
             self.clear_screen()
             print("Choose Number that is on the Menu!")
+
 
 
