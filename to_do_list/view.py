@@ -17,3 +17,25 @@ class Start:
             
             except ValueError:
                 print("Choose only the Number")
+
+    def add_task_input(self):
+        return input("What task do you want to add: ").strip().upper()
+
+    def choose_task(self):
+        try:
+            return int(input("Enter task number: ")) - 1
+        except ValueError:
+            return -1
+
+    def show_tasks(self, tasks):
+
+        if not tasks:
+            print("No tasks available.")
+            return
+
+        for i, task in enumerate(tasks, start=1):
+            status = "✓" if task["completed"] else "✗"
+            print(f"{i}. {task['task']} [{status}]")
+
+    def message(self, text):
+        print(text)
